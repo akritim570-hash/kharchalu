@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.com.kharchalu",
+      "sha256_cert_fingerprints": [
+        "68:1A:BD:5B:32:55:3A:BB:C4:EA:1C:C4:51:8B:BE:7B:1A:B8:01:E2:BA:E9:0A:91:39:CA:82:08:02:8B:7D:20"
+      ]
+    }
+  }
+]
