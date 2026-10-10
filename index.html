@@ -1,279 +1,566 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kharchalu - Expense Tracker</title>
-<link rel="canonical" href="https://www.kharchalu.com/" />
-<base href="https://www.kharchalu.com/">
-<link rel="icon" href="images/logo.png" type="image/png">
-<meta name="keywords" content="expense tracker, kharchalu, smart expense intelligence, expense tracker, spending app, budgeting app, expense manager, best expense tracker app, money manager, ai expense tracker, income and expense tracker, simple expense tracker, expense tracker with charts, UPI expense tracker, money tracker, kharch, kharchalu, khatabook, student expense tracker, expense tracker free, best expense tracker, finance app, budget app free, money management app, daily spending app, Wallet, Money Manager, Spendee, smart expense tracker, Monefy, wallet app money manager, easy expense tracker, fast expense tracker, simple money manager, expense, money, my money, expense tracker with budget planner, money manager with bill reminder, expense tracker with savings goals, budget planner with expense tracker, expense tracker with export to excel, money tracker with graphs, expense tracker with categories and charts, Indian expense tracker, rupee expense tracker, money manager India, daily kharcha app, khata book expense tracker, udhar account app, हिसाब किताब app, खर्चा ट्रैकर, paisa track karne wala app, minimal expense tracker, lightweight expense tracker, no login expense tracker, expense tracker without ads, open source expense tracker, pocket money tracker, college expense tracker, household expense tracker, family budget planner, home expense manager, business expense tracker, work expense tracker, travel expense tracker, save money app, control spending app, stop overspending, financial planning app, smart budgeting app, money saving app, Track daily expenses, save money easily with charts & reports, budget planner, budget reports, budget charts, save money, expense note, expense daily records, expense tracking, kharcha book, kharcha game, kharcha, kharcha app, paisa, best expense tracker app in India, best expense calculator, best calculator, your personal expense calculator, expense calculator, kharchalu, Kharchalu - Expense Tracker">
-<meta name="description" content="Kharchalu helps you track, analyze, and manage your daily expenses easily. Take control of your finances today. Expense Calculator: Kharchalu, Kharchalu - Expense Tracker. Expense tracker & money manager to control spending and save money">
-<meta property="og:image" content="https://www.kharchalu.com/app-logo.png">
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #f5f7fb;
-    color: #333;
-}
+    <!-- Primary Meta Tags -->
+    <title>Kharchalu - Best Daily Expense Tracker & Personal Finance Manager</title>
+    <meta name="title" content="Kharchalu - Best Daily Expense Tracker & Personal Finance Manager">
+    <meta name="description"
+        content="All-in-One Personal Finance Management app. Kharchalu is an expense tracker & money manager to control spending, optimize savings, and foresee future monthly budgets effortlessly.">
+    <meta name="keywords"
+        content="expense tracker, money manager, personal finance, budget planner, savings tracker, daily expenses, financial insights, Kharchalu app">
+    <meta name="author" content="Kharchalu">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.kharchalu.com/">
 
-/* Header */
-header {
-    background: #5B21B6;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
 
-header h1 {
-    font-size: 28px;
-}
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kharchalu.com/">
+    <meta property="og:title" content="Kharchalu - Best Daily Expense Tracker & Personal Finance Manager">
+    <meta property="og:description"
+        content="All-in-One Personal Finance Management app. Kharchalu is an expense tracker & money manager to control spending, optimize savings, and foresee future monthly budgets effortlessly.">
+    <meta property="og:image" content="https://www.kharchalu.com/srs-app.png">
 
-header p {
-    opacity: 0.9;
-}
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kharchalu.com/">
+    <meta property="twitter:title" content="Kharchalu - Best Daily Expense Tracker & Personal Finance Manager">
+    <meta property="twitter:description"
+        content="All-in-One Personal Finance Management app. Kharchalu is an expense tracker & money manager to control spending, optimize savings, and foresee future monthly budgets effortlessly.">
+    <meta property="twitter:image" content="https://www.kharchalu.com/srs-app.png">
 
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: center;
-    background: #222;
-    flex-wrap: wrap;
-}
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#e05243">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff5f4',
+                            100: '#ffe8e5',
+                            200: '#ffd6d1',
+                            500: '#e05243', // Logo Primary Coral Red
+                            600: '#cc3f30',
+                            700: '#aa2f22',
+                            900: '#4a120c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
 
-nav a {
-    color: white;
-    padding: 12px 15px;
-    text-decoration: none;
-    font-size: 14px;
-}
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
 
-nav a:hover {
-    background: #444;
-}
-
-/* Hero */
-.hero {
-    text-align: center;
-    padding: 20px 20px;
-    background: white;
-}
-
-.hero h2 {
-    font-size: 26px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    color: #666;
-    margin-bottom: 20px;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 12px 22px;
-    margin: 5px;
-    border-radius: 30px;
-    text-decoration: none;
-    color: black;
-    background: transparent;
-    border: 1.5px solid black;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: aliceblue;
-}
-
-/* Sections */
-.section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.section h2 {
-    margin-bottom: 20px;
-}
-
-/* Features */
-.features {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-/* Screenshots */
-.screenshots {
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    padding: 10px;
-}
-
-.screenshots img {
-    width: 220px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-
-.screenshots img:hover {
-    transform: scale(1.05);
-}
-
-/* Download */
-.download {
-    background: #5B21B6;
-    color: white;
-}
-
-/* Footer */
-footer {
-    background: #111;
-    color: #aaa;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-}
-
-/* Desktop */
-@media(min-width: 768px) {
-    .features {
-        flex-direction: row;
-    }
-}
-.video-container {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  padding-bottom: 56.25%; /* 16:9 ratio */
-  height: 0;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Akriti Mishra",
-  "url": "https://www.kharchalu.com",
-  "logo": "https://www.kharchalu.com/logo.png"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "How to Save Money Fast | Kharchalu App Guide",
-  "description": "Learn how to manage your expenses and save money using Kharchalu app.",
-  "thumbnailUrl": "https://i9.ytimg.com/vi_webp/_-TFZR-sWYk/mqdefault.webp?v=69c50e07&sqp=CLTf3s4G&rs=AOn4CLBvzkzIb4UHjovWVKwNW0ad9ydotA",
-  "uploadDate": "2026-04-01",
-  "contentUrl": "https://www.youtube.com/watch?v=_-TFZR-sWYk",
-  "embedUrl": "https://www.youtube.com/embed/_-TFZR-sWYk"
-}
-</script>
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
 
-<header>
-    <h1>Kharchalu: Money Tracker</h1>
-    <p>Track Today, Predict Tomorrow</p>
-</header>
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-1 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="logo.png" alt="Kharchalu Logo" class="h-16 sm:h-20 w-auto object-contain">
+            </a>
 
-<nav>
-    <a href="https://www.kharchalu.com/#home">Home</a>
-    <a href="https://www.kharchalu.com/#features">Features</a>
-    <a href="https://www.kharchalu.com/#screenshots">Screenshots</a>
-    <a href="https://play.google.com/store/search?q=io.com.kharchalu&c=apps&hl=en_IN">Download</a>
-    <a href="https://www.kharchalu.com/privacy-policy">Privacy Policy</a>
-    <a href="https://www.kharchalu.com/#contact">Contact</a>
-</nav>
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="#features" class="hover:text-brand-500 transition-colors">Features</a>
+                <a href="#screenshots" class="hover:text-brand-500 transition-colors">Screenshots</a>
+                <a href="#contact" class="hover:text-brand-500 transition-colors">Contact</a>
+            </nav>
 
-<section class="hero" id="home">
-    <img src="/images/logo.png" style="width:214px; max-width:100%; height:auto;" alt="money tracker logo">
-    <h2>All-in-One Personal Finance Management. Expense tracker & money manager to control spending and save money</h2>
-    <p>From expense tracking to financial insights, Kharchalu provides everything you need to manage your money smartly and effectively.</p>
-    <a href="https://play.google.com/store/search?q=io.com.kharchalu&c=apps&hl=en_IN" class="btn">Download Now</a>
-    <h2>Kharchalu Tour Video </h2>
-    <iframe loading="lazy" style="width:100%; aspect-ratio:16/9;"
-    src="https://www.youtube.com/embed/_-TFZR-sWYk"
-    title="Save Money Fast | Expense Tracker App"
-    allowfullscreen></iframe>
-</section>
+            <!-- Right side CTA & Mobile Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="#download"
+                    class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm transition-all shadow-md shadow-brand-500/25 hover:shadow-brand-500/40">
+                    Download App
+                </a>
 
-<section class="section" id="features">
-    <h2>Features</h2>
-    <div class="features">
-        <div class="card">
-            <h3>Fast Performance</h3>
-            <p>Optimized for speed and efficiency.</p>
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn"
+                    class="md:hidden p-2 text-slate-600 hover:text-brand-500 focus:outline-none transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
-        <div class="card">
-            <h3>Secure</h3>
-            <p>Your data is protected with top security.</p>
+
+        <!-- Mobile Nav Menu (Hidden by default) -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-md">
+            <nav class="flex flex-col px-6 pt-4 pb-6 space-y-4 text-base font-semibold text-slate-600">
+                <a href="#features" class="mobile-link hover:text-brand-500 transition-colors">Features</a>
+                <a href="#screenshots" class="mobile-link hover:text-brand-500 transition-colors">Screenshots</a>
+                <a href="#contact" class="mobile-link hover:text-brand-500 transition-colors">Contact</a>
+                <a href="#download"
+                    class="mobile-link inline-flex items-center justify-center px-5 py-3 mt-2 rounded-xl bg-brand-500 text-white transition-colors sm:hidden">
+                    Download App
+                </a>
+            </nav>
         </div>
-        <div class="card">
-            <h3>User Friendly</h3>
-            <p>Simple and clean interface for everyone.</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+        class="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden bg-gradient-to-b from-brand-50/60 via-slate-50 to-slate-50">
+        <!-- Light Ambient Glows -->
+        <div
+            class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-200/40 rounded-full blur-[100px] -z-10 pointer-events-none">
         </div>
-         <div class="card">
-            <h3>Prediction</h3>
-            <p>Predict future expense efforlessly.</p>
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-600 text-xs font-bold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-brand-500 animate-ping"></span>
+                        Smart Expense Manager
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+                        Track Today. <br>
+                        <span class="text-brand-500">Predict Tomorrow.</span>
+                    </h1>
+
+                    <p class="text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        All-in-One Personal Finance Management. Expense tracker & money manager to control spending and
+                        save money.<br>
+                        From expense tracking to financial insights, Kharchalu provides everything you need to manage
+                        your money smartly and effectively.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-row items-center justify-center lg:justify-start gap-2 sm:gap-4 pt-2">
+                        <a href="https://play.google.com/store/apps/details?id=io.com.kharchalu" target="_blank"
+                            class="hover:scale-105 transition-transform shrink-0 bg-white rounded-xl flex items-center justify-center">
+                            <img src="badge-google-play-and-app-store-button-download-free-png.webp"
+                                alt="Get it on Play Store" class="h-10 sm:h-14 w-auto object-contain drop-shadow-md">
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=_-TFZR-sWYk&t=34s" target="_blank"
+                            class="flex-1 sm:flex-none sm:w-auto px-4 py-3 sm:px-8 sm:py-4 rounded-xl bg-white border border-slate-200 hover:bg-slate-100 text-slate-800 font-bold text-[13px] sm:text-base transition-all flex items-center justify-center gap-1.5 sm:gap-2 shadow-sm text-center">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-500 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>Watch Tour</span>
+                        </a>
+                    </div>
+
+                    <!-- Micro Social Proof -->
+                    <div
+                        class="pt-6 flex items-center justify-center lg:justify-start gap-8 text-slate-500 text-sm border-t border-slate-200">
+                        <div>
+                            <span class="block text-slate-900 font-extrabold text-lg">100% Encrypted</span>
+                            <span>Secure Data</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Column (App Mockup Frame) -->
+                <div class="lg:col-span-5 flex justify-center items-center">
+                    <img src="poster.png" alt="Kharchalu App Screenshot"
+                        class="w-full max-w-[320px] lg:max-w-md object-contain drop-shadow-2xl hover:scale-[1.02] transition-transform duration-500">
+                </div>
+
+            </div>
         </div>
+    </section>
+
+    <!-- Core Features Grid -->
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brand-500 font-bold text-[11px] sm:text-xs uppercase tracking-[0.15em]">WHY CHOOSE
+                    KHARCHALU</span>
+                <h2 class="text-3xl sm:text-[40px] font-extrabold text-slate-900 tracking-tight mt-3 mb-4">All-In-One
+                    Personal Finance</h2>
+                <p class="text-slate-500 text-[15px] sm:text-base font-normal">Simple tools created to help you
+                    understand where your money goes every single day.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <!-- Feature 1 -->
+                <div
+                    class="p-7 sm:p-8 rounded-[24px] bg-slate-50/50 border border-slate-100 transition-transform hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-[14px] bg-gradient-to-br from-white to-brand-50/50 border border-brand-100/80 shadow-sm shadow-brand-100/40 flex items-center justify-center text-xl mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-6 h-6 text-brand-500">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-[17px] font-bold text-slate-900 mb-3 tracking-tight">Fast Performance</h3>
+                    <p class="text-[13px] text-slate-500 leading-[1.7] font-medium">Optimized for speed and minimal taps
+                        so you can log expenses instantly on the go.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div
+                    class="p-7 sm:p-8 rounded-[24px] bg-slate-50/50 border border-slate-100 transition-transform hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-[14px] bg-gradient-to-br from-white to-brand-50/50 border border-brand-100/80 shadow-sm shadow-brand-100/40 flex items-center justify-center text-xl mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-6 h-6 text-brand-500">
+                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-[17px] font-bold text-slate-900 mb-3 tracking-tight">Private & Secure</h3>
+                    <p class="text-[13px] text-slate-500 leading-[1.7] font-medium">Top security protocols ensure your
+                        income and personal logs stay completely private.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div
+                    class="p-7 sm:p-8 rounded-[24px] bg-slate-50/50 border border-slate-100 transition-transform hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-[14px] bg-gradient-to-br from-white to-brand-50/50 border border-brand-100/80 shadow-sm shadow-brand-100/40 flex items-center justify-center text-xl mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-6 h-6 text-brand-500">
+                            <path
+                                d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-[17px] font-bold text-slate-900 mb-3 tracking-tight">User Friendly</h3>
+                    <p class="text-[13px] text-slate-500 leading-[1.7] font-medium">A clean, clutter-free dashboard
+                        suitable for beginners and seasoned budgeters alike.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div
+                    class="p-7 sm:p-8 rounded-[24px] bg-slate-50/50 border border-slate-100 transition-transform hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-[14px] bg-gradient-to-br from-white to-brand-50/50 border border-brand-100/80 shadow-sm shadow-brand-100/40 flex items-center justify-center text-xl mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-6 h-6 text-brand-500">
+                            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                            <polyline points="16 7 22 7 22 13" />
+                        </svg>
+                    </div>
+                    <h3 class="text-[17px] font-bold text-slate-900 mb-3 tracking-tight">Smart Forecasts</h3>
+                    <p class="text-[13px] text-slate-500 leading-[1.7] font-medium">Predict future month expenditures
+                        based on historical spending habits and trends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screen Showcase Section -->
+    <section id="screenshots" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-16">
+                <div>
+                    <span class="text-brand-500 font-bold text-xs uppercase tracking-widest">APP SHOWCASE</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2">Explore the
+                        Interfaces</h2>
+                    <p class="text-slate-600 text-base max-w-md mt-4 md:mt-3"> Intuitive tools tailored for your daily
+                        tracking. </p>
+                </div>
+                <div class="hidden md:flex items-center gap-4">
+                    <button id="carousel-prev"
+                        class="w-12 h-12 flex items-center justify-center rounded-full bg-white border border-slate-200 text-slate-600 hover:text-brand-500 hover:border-brand-500 hover:shadow-md transition-all z-20">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <button id="carousel-next"
+                        class="w-12 h-12 flex items-center justify-center rounded-full bg-white border border-slate-200 text-slate-600 hover:text-brand-500 hover:border-brand-500 hover:shadow-md transition-all z-20">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Full width CSS Marquee Carousel -->
+        <div class="relative overflow-hidden w-full group mt-8">
+            <!-- Gradient Masks -->
+            <div
+                class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none">
+            </div>
+            <div
+                class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none">
+            </div>
+
+            <!-- Scrollable Track -->
+            <div id="carousel-track"
+                style="padding-left: max(1.5rem, calc((100% - 80rem) / 2 + 1.5rem)); padding-right: max(1.5rem, calc((100% - 80rem) / 2 + 1.5rem)); scroll-padding-left: max(1.5rem, calc((100% - 80rem) / 2 + 1.5rem)); scroll-padding-right: max(1.5rem, calc((100% - 80rem) / 2 + 1.5rem));"
+                class="flex overflow-x-auto scroll-smooth hide-scrollbar gap-6 md:gap-8 snap-x snap-mandatory pb-8">
+                <img src="home.png" alt="Add income & expense"
+                    class="h-80 md:h-[450px] w-auto rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-200/80 shrink-0 object-contain bg-white cursor-pointer transition-transform duration-300 snap-start hover:scale-105">
+                <img src="feedbacks.png" alt="Budget Planning"
+                    class="h-80 md:h-[450px] w-auto rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-200/80 shrink-0 object-contain bg-white cursor-pointer transition-transform duration-300 snap-start hover:scale-105">
+                <img src="category.png" alt="Custom Category Setup"
+                    class="h-80 md:h-[450px] w-auto rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-200/80 shrink-0 object-contain bg-white cursor-pointer transition-transform duration-300 snap-start hover:scale-105">
+                <img src="Record.png" alt="App Interface"
+                    class="h-80 md:h-[450px] w-auto rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-200/80 shrink-0 object-contain bg-white cursor-pointer transition-transform duration-300 snap-start hover:scale-105">
+                <img src="Track.png" alt="Expense Setup"
+                    class="h-80 md:h-[450px] w-auto rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-200/80 shrink-0 object-contain bg-white cursor-pointer transition-transform duration-300 snap-start hover:scale-105">
+                <img src="Data%20management.png" alt="Various Charts"
+                    class="h-80 md:h-[450px] w-auto rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-200/80 shrink-0 object-contain bg-white cursor-pointer transition-transform duration-300 snap-start hover:scale-105">
+                <img src="View%20profile.png" alt="Category Icons"
+                    class="h-80 md:h-[450px] w-auto rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-200/80 shrink-0 object-contain bg-white cursor-pointer transition-transform duration-300 snap-start hover:scale-105">
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="tour" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-500 font-bold text-[11px] sm:text-xs uppercase tracking-[0.15em]">SEE IT IN
+                    ACTION</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3 mb-4">Meet Kharchalu
+                </h2>
+                <p class="text-slate-500 text-[15px] sm:text-base font-normal">Watch a quick tour of Kharchalu and see
+                    how easy it is to manage your money smartly and effectively.</p>
+            </div>
+
+            <div
+                class="max-w-4xl mx-auto rounded-[24px] overflow-hidden shadow-2xl shadow-slate-200/60 border border-slate-200/80 bg-slate-50">
+                <div class="w-full aspect-video">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/_-TFZR-sWYk?start=34"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section id="download" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div
+                class="relative rounded-3xl bg-gradient-to-r from-brand-500 to-brand-600 p-10 md:p-16 overflow-hidden shadow-2xl shadow-brand-500/30">
+                <div class="relative z-10 max-w-2xl">
+                    <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">Master Your
+                        Money Today</h2>
+                    <p class="text-brand-100 mt-4 text-base sm:text-lg">Download Kharchalu from Google Play Store and
+                        start managing your money with clarity and ease.</p>
+
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="https://play.google.com/store/apps/details?id=io.com.kharchalu" target="_blank"
+                            class="hover:scale-105 transition-transform shrink-0 bg-white rounded-lg flex items-center justify-center">
+                            <img src="badge-google-play-and-app-store-button-download-free-png.webp"
+                                alt="Download on Google Play" class="h-14 w-auto object-contain drop-shadow-md">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-white border-t border-slate-200 pt-16 pb-12 text-slate-600 text-sm">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+            <div class="space-y-4 md:col-span-2">
+                <div class="flex items-center">
+                    <img src="logo.png" alt="Kharchalu Logo" class="h-16 sm:h-20 w-auto object-contain">
+                </div>
+                <p class="text-slate-500 max-w-sm">All-In-One Personal Finance & Daily Expense Tracker App.</p>
+            </div>
+            <div>
+                <h4 class="text-slate-900 font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2.5 font-medium">
+                    <li><a href="#features" class="hover:text-brand-500 transition-colors">Features</a></li>
+                    <li><a href="#screenshots" class="hover:text-brand-500 transition-colors">Screenshots</a></li>
+                    <li><a href="#download" class="hover:text-brand-500 transition-colors">Download</a></li>
+                    <li><a href="privacy-policy.html" class="hover:text-brand-500 transition-colors">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-slate-900 font-bold mb-4">Contact Info</h4>
+                <ul class="space-y-2.5 font-medium">
+                    <li><a href="mailto:kharchaluapp@gmail.com"
+                            class="hover:text-brand-500 transition-colors">kharchaluapp@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-200 text-center text-xs text-slate-400 font-medium">
+            © 2026 Kharchalu. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Image Preview Modal -->
+    <div id="image-modal"
+        class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-900/90 backdrop-blur-sm p-4 md:p-8 opacity-0 transition-opacity duration-300">
+        <button id="modal-close"
+            class="absolute top-6 right-6 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white text-3xl transition-colors z-50">
+            &times;
+        </button>
+        <button id="modal-prev"
+            class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors z-50">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+        <button id="modal-next"
+            class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors z-50">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+        <img id="modal-image" src="" alt="Preview"
+            class="max-w-full max-h-full rounded-2xl shadow-2xl object-contain scale-95 transition-transform duration-300 relative z-10">
     </div>
-</section>
 
-<section class="section" id="screenshots">
-    <h2>App Screenshots</h2>
-    <div class="screenshots">
-        <img src="images/budget-planning-chart-for-monthly-expenses.png" alt="budget planning chart for monthly expenses">
-        <img src="images/expense-various-charts.png" alt="expense-various-charts">
-        <img src="images/spend-summary-section.png" alt="spend-summary-section">
-        <img src="images/custom-category-setup.png" alt="custom-category-setup">
-        <img src="images/expesne-category-icons.png" alt="expesne-category-icons">
-        <img src="images/expense-setup-easily.png" alt="expense-setup-easily">
-        <img src="images/Daily-expense-tracker-app-interface.png" alt="Daily expense tracker app interface">
-        <img src="images/simple-budget-planning-method-for-beginners-in-India.png" alt="simple budget planning method for beginners in India">
-        <img src="images/add income & expense.png" alt="add income & expense">
-    </div>
-</section>
-<section class="section download" id="download">
-    <h2>Download Now</h2>
-    <p>Available on playstore</p>
-    <img src="/images/money_tracker_kharchalu_playstore.png" alt="money tracker kharchalu playstore">
-</section>
+    <!-- Script for Image Preview -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-image');
+            const closeBtn = document.getElementById('modal-close');
+            const prevBtn = document.getElementById('modal-prev');
+            const nextBtn = document.getElementById('modal-next');
 
-<section class="section" id="contact">
-    <h2>Contact</h2>
-    <p>Email: kharchaluapp@gmail.com</p>
-</section>
+            const marqueeImages = Array.from(document.querySelectorAll('#carousel-track img'));
+            let currentImageIndex = 0;
 
-<footer>
-    <p>© 2026 Kharchalu. All rights reserved.</p>
-</footer>
+            function openModal(index) {
+                currentImageIndex = index;
+                modalImg.src = marqueeImages[currentImageIndex].src;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
 
+                // Trigger reflow for CSS transitions
+                void modal.offsetWidth;
+
+                modal.classList.add('opacity-100');
+                modalImg.classList.replace('scale-95', 'scale-100');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modal.classList.remove('opacity-100');
+                modalImg.classList.replace('scale-100', 'scale-95');
+
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                    document.body.style.overflow = '';
+                }, 300);
+            }
+
+            function showNextImage() {
+                currentImageIndex = (currentImageIndex + 1) % marqueeImages.length;
+                modalImg.src = marqueeImages[currentImageIndex].src;
+            }
+
+            function showPrevImage() {
+                currentImageIndex = (currentImageIndex - 1 + marqueeImages.length) % marqueeImages.length;
+                modalImg.src = marqueeImages[currentImageIndex].src;
+            }
+
+            marqueeImages.forEach((img, index) => {
+                img.addEventListener('click', () => {
+                    openModal(index);
+                });
+            });
+
+            closeBtn.addEventListener('click', closeModal);
+
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showPrevImage();
+            });
+
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showNextImage();
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (!modal.classList.contains('hidden')) {
+                    if (e.key === 'Escape') closeModal();
+                    else if (e.key === 'ArrowRight') showNextImage();
+                    else if (e.key === 'ArrowLeft') showPrevImage();
+                }
+            });
+
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Carousel Navigation
+            const carouselTrack = document.getElementById('carousel-track');
+            const carouselPrev = document.getElementById('carousel-prev');
+            const carouselNext = document.getElementById('carousel-next');
+
+            if (carouselTrack && carouselPrev && carouselNext) {
+                const scrollAmount = 350; // Roughly the width of one image + gap
+
+                carouselPrev.addEventListener('click', () => {
+                    carouselTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                });
+
+                carouselNext.addEventListener('click', () => {
+                    carouselTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
 </body>
+
 </html>
