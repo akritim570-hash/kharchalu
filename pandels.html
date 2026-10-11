@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description"
+        content="Discover Durga Puja pandels and locations across Berhampore, Murshidabad, West Bengal." />
+
+    <title>Durga Puja | Pandel Finder</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* =========================================================
+       ROOT
+    ========================================================= */
+
+        :root {
+            --primary: #b42318;
+            --primary-dark: #8f1d14;
+            --primary-light: #fff1ef;
+
+            --gold: #d99a18;
+            --gold-light: #fff8e5;
+
+            --text: #1f2937;
+            --heading: #171717;
+            --muted: #6b7280;
+
+            --border: #eadfd9;
+            --background: #fffaf7;
+            --surface: #ffffff;
+
+            --shadow-sm: 0 4px 15px rgba(60, 25, 15, 0.06);
+            --shadow-md: 0 12px 35px rgba(60, 25, 15, 0.09);
+            --shadow-lg: 0 20px 55px rgba(60, 25, 15, 0.14);
+
+            --radius-sm: 10px;
+            --radius-md: 16px;
+            --radius-lg: 22px;
+
+            --container: 1180px;
+        }
+
+        .location-info span {
+            display: block;
+        }
+
+        /* =========================================================
+       RESET
+    ========================================================= */
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background:
+                radial-gradient(circle at 10% 10%,
+                    rgba(217, 154, 24, 0.07),
+                    transparent 25%),
+                var(--background);
+            color: var(--text);
+            line-height: 1.5;
+            min-height: 100vh;
+        }
+
+        button,
+        input {
+            font: inherit;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* =========================================================
+       HEADER
+    ========================================================= */
+
+        .header {
+            height: 72px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 5%;
+
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid rgba(234, 223, 217, 0.9);
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+
+            text-decoration: none;
+            color: var(--heading);
+
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: -0.7px;
+        }
+
+        .logo-icon {
+            width: 38px;
+            height: 38px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 11px;
+
+            background:
+                linear-gradient(135deg,
+                    var(--primary),
+                    #d9432f);
+
+            color: white;
+            font-size: 19px;
+
+            box-shadow:
+                0 7px 18px rgba(180, 35, 24, 0.22);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .header-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+
+            padding: 8px 13px;
+
+            border-radius: 50px;
+
+            background: var(--gold-light);
+            border: 1px solid #f2dfaa;
+
+            color: #956b0d;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .live-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #16a34a;
+
+            box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.1);
+        }
+
+        /* =========================================================
+       MAIN CONTAINER
+    ========================================================= */
+
+        .container {
+            width: min(var(--container), 92%);
+            margin: 0 auto;
+            padding: 65px 0 80px;
+        }
+
+        /* =========================================================
+       HERO
+    ========================================================= */
+
+        .hero {
+            max-width: 780px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 8px 14px;
+            margin-bottom: 19px;
+
+            border: 1px solid #f1d5cd;
+            border-radius: 50px;
+
+            background: var(--primary-light);
+            color: var(--primary);
+
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.2px;
+        }
+
+        .hero-badge-icon {
+            color: var(--gold);
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+
+            color: var(--heading);
+
+            font-size: clamp(38px, 6vw, 62px);
+            line-height: 1.05;
+
+            letter-spacing: -1.8px;
+
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 auto;
+
+            color: var(--muted);
+
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* =========================================================
+       SEARCH
+    ========================================================= */
+
+        .search-wrapper {
+            max-width: 720px;
+            margin: 0 auto 60px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+
+            padding: 7px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+            border-radius: 15px;
+
+            box-shadow: var(--shadow-md);
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .search-box:focus-within {
+            border-color: rgba(180, 35, 24, 0.4);
+
+            box-shadow:
+                0 0 0 4px rgba(180, 35, 24, 0.07),
+                var(--shadow-md);
+        }
+
+        .search-icon {
+            width: 48px;
+            height: 48px;
+
+            display: grid;
+            place-items: center;
+
+            color: var(--primary);
+
+            font-size: 22px;
+        }
+
+        .search-box input {
+            flex: 1;
+
+            width: 100%;
+
+            border: 0;
+            outline: 0;
+
+            background: transparent;
+
+            color: var(--text);
+
+            font-size: 14px;
+        }
+
+        .search-box input::placeholder {
+            color: #9ca3af;
+        }
+
+        .search-hint {
+            margin-top: 10px;
+
+            text-align: center;
+
+            color: #9ca3af;
+
+            font-size: 11px;
+        }
+
+        /* =========================================================
+       SECTION
+    ========================================================= */
+
+        .section {
+            margin-bottom: 48px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title-icon {
+            width: 42px;
+            height: 42px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 12px;
+
+            background: var(--primary-light);
+
+            color: var(--primary);
+
+            font-size: 19px;
+        }
+
+        .section-title h2 {
+            color: var(--heading);
+
+            font-size: 20px;
+            font-weight: 800;
+
+            letter-spacing: -0.5px;
+        }
+
+        .section-title p {
+            margin-top: 2px;
+
+            color: var(--muted);
+
+            font-size: 12px;
+        }
+
+        .section-header>p {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        /* =========================================================
+       LOCATION CARD
+    ========================================================= */
+
+        .location-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .location-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+            min-height: 90px;
+
+            padding: 17px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+
+            text-decoration: none;
+
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .location-item:hover {
+            transform: translateY(-4px);
+
+            border-color: #e4b9ae;
+
+            box-shadow: var(--shadow-md);
+        }
+
+        .location-icon {
+            width: 47px;
+            height: 47px;
+
+            flex: 0 0 47px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 13px;
+
+            background: var(--primary-light);
+
+            color: var(--primary);
+
+            font-size: 20px;
+        }
+
+        .location-info {
+            min-width: 0;
+            flex: 1;
+        }
+
+        .location-info h3 {
+            margin-bottom: 3px;
+
+            color: var(--heading);
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .location-info span {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .arrow {
+            color: #aaa;
+
+            font-size: 21px;
+
+            transition:
+                transform 0.2s ease,
+                color 0.2s ease;
+        }
+
+        .location-item:hover .arrow {
+            color: var(--primary);
+            transform: translateX(4px);
+        }
+
+        /* =========================================================
+       MAP CTA
+    ========================================================= */
+
+        .map-banner {
+            position: relative;
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+
+            margin-top: 55px;
+            padding: 32px;
+
+            border-radius: var(--radius-lg);
+
+            color: white;
+
+            background:
+                radial-gradient(circle at 90% 10%,
+                    rgba(255, 220, 120, 0.3),
+                    transparent 25%),
+                linear-gradient(135deg,
+                    #941d15 0%,
+                    #bd2e21 55%,
+                    #d64b34 100%);
+
+            box-shadow: var(--shadow-lg);
+        }
+
+        .map-banner::before {
+            content: "";
+
+            position: absolute;
+
+            width: 280px;
+            height: 280px;
+
+            right: -100px;
+            top: -150px;
+
+            border: 35px solid rgba(255, 255, 255, 0.08);
+
+            border-radius: 50%;
+        }
+
+        .map-banner::after {
+            content: "✦";
+
+            position: absolute;
+
+            right: 230px;
+            bottom: -28px;
+
+            color: rgba(255, 255, 255, 0.1);
+
+            font-size: 100px;
+        }
+
+        .map-banner-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .map-banner-content small {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #ffd98c;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .map-banner h2 {
+            margin-bottom: 7px;
+
+            font-size: 24px;
+            font-weight: 800;
+
+            letter-spacing: -0.6px;
+        }
+
+        .map-banner p {
+            max-width: 570px;
+
+            color: rgba(255, 255, 255, 0.78);
+
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .map-button {
+            position: relative;
+            z-index: 2;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+
+            min-width: 145px;
+
+            border: 0;
+            border-radius: 11px;
+
+            padding: 13px 19px;
+
+            background: white;
+            color: var(--primary);
+
+            font-size: 13px;
+            font-weight: 800;
+
+            cursor: pointer;
+
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .map-button:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* =========================================================
+       EMPTY SEARCH STATE
+    ========================================================= */
+
+        .no-results {
+            grid-column: 1 / -1;
+
+            padding: 35px 20px;
+
+            text-align: center;
+
+            background: white;
+
+            border: 1px dashed var(--border);
+            border-radius: var(--radius-md);
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+        .no-results-icon {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-size: 28px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* =========================================================
+       FOOTER
+    ========================================================= */
+
+        .footer {
+            padding: 25px 5%;
+
+            border-top: 1px solid var(--border);
+
+            background: white;
+
+            text-align: center;
+
+            color: var(--muted);
+
+            font-size: 12px;
+        }
+
+        .footer strong {
+            color: var(--primary);
+        }
+
+        /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+        @media (max-width: 900px) {
+            .location-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .container {
+                padding-top: 50px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .header {
+                height: 66px;
+                padding: 0 4%;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            .logo-icon {
+                width: 34px;
+                height: 34px;
+                font-size: 16px;
+            }
+
+            .header-badge {
+                padding: 7px 10px;
+                font-size: 10px;
+            }
+
+            .container {
+                width: 92%;
+                padding: 42px 0 55px;
+            }
+
+            .hero {
+                margin-bottom: 30px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+                letter-spacing: -1px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .search-wrapper {
+                margin-bottom: 45px;
+            }
+
+            .search-box {
+                border-radius: 13px;
+            }
+
+            .search-hint {
+                display: none;
+            }
+
+            .section {
+                margin-bottom: 38px;
+            }
+
+            .section-header {
+                display: block;
+                margin-bottom: 14px;
+            }
+
+            .section-header>p {
+                margin-top: 7px;
+                margin-left: 54px;
+            }
+
+            .location-list {
+                grid-template-columns: 1fr;
+            }
+
+            .map-banner {
+                display: block;
+                padding: 25px;
+                margin-top: 35px;
+            }
+
+            .map-banner h2 {
+                font-size: 21px;
+            }
+
+            .map-button {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .header-badge {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .section-title h2 {
+                font-size: 18px;
+            }
+        }
+
+        /* =========================================================
+       REDUCED MOTION
+    ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+            }
+        }
+
+        /* =========================================================
+   VISITED BUTTON
+========================================================= */
+
+        .visited-btn {
+            flex-shrink: 0;
+
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+
+            border: 1px solid #e5e7eb;
+            border-radius: 50px;
+
+            padding: 7px 10px;
+
+            background: #fff;
+            color: #9ca3af;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                background 0.2s ease,
+                border-color 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .visited-btn .tick {
+            width: 18px;
+            height: 18px;
+
+            display: grid;
+            place-items: center;
+
+            border: 1px solid #d1d5db;
+            border-radius: 50%;
+
+            font-size: 11px;
+
+            transition:
+                background 0.2s ease,
+                border-color 0.2s ease,
+                color 0.2s ease;
+        }
+
+        .visited-btn:hover {
+            border-color: #16a34a;
+            color: #16a34a;
+        }
+
+        /* Visited state */
+
+        .location-item.visited .visited-btn {
+            background: #ecfdf3;
+            border-color: #86efac;
+            color: #15803d;
+        }
+
+        .location-item.visited .visited-btn .tick {
+            background: #16a34a;
+            border-color: #16a34a;
+            color: white;
+        }
+
+        /* Slightly dim visited card */
+
+        .location-item.visited {
+            background: #fcfffd;
+            border-color: #d1fae5;
+        }
+
+        .location-item.visited .location-info h3 {
+            color: #166534;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 650px) {
+            .visited-btn {
+                padding: 6px;
+            }
+
+            .visited-btn .visited-text {
+                display: none;
+            }
+        }
+
+        /* =========================================================
+   PAGINATION
+========================================================= */
+
+        .pagination {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+
+            margin-top: 28px;
+        }
+
+        .page-numbers {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .page-btn,
+        .page-number {
+            min-width: 40px;
+            height: 40px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid var(--border);
+            border-radius: 10px;
+
+            background: white;
+            color: var(--text);
+
+            font-size: 12px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                background 0.2s ease,
+                border-color 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .page-btn {
+            padding: 0 14px;
+        }
+
+        .page-btn:hover:not(:disabled),
+        .page-number:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+
+            transform: translateY(-1px);
+        }
+
+        .page-number.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .page-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .page-dots {
+            min-width: 30px;
+
+            display: inline-flex;
+            justify-content: center;
+
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 480px) {
+
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 6px;
+  }
+
+  .page-btn {
+    height: 38px;
+    padding: 0 10px;
+
+    font-size: 11px;
+    white-space: nowrap;
+
+    flex-shrink: 0;
+  }
+
+  .page-numbers {
+    display: flex;
+    gap: 3px;
+
+    overflow: hidden;
+  }
+
+  .page-number {
+    min-width: 34px;
+    height: 36px;
+    padding: 0 8px;
+
+    flex-shrink: 0;
+  }
+
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =======================================================
+       HEADER
+  ======================================================== -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo" aria-label="Pandel Finder Home">
+            <span class="logo-icon">🪔</span>
+            Pandel<span>Finder</span>
+        </a>
+
+        <div class="header-badge">
+            <span class="live-dot"></span>
+            Durga Puja 2026 (Berhampore)
+        </div>
+
+    </header>
+
+
+    <!-- =======================================================
+       MAIN
+  ======================================================== -->
+
+    <main class="container">
+
+        <!-- Hero -->
+
+        <section class="hero">
+
+            <div class="hero-badge">
+                <span class="hero-badge-icon">✦</span>
+                Discover Durga Puja 2026
+            </div>
+
+            <h1>
+                Explore Durga Puja
+                <span>Pandels</span>
+            </h1>
+
+            <p>
+                Find Durga Puja pandels around Berhampore.
+                Discover locations and navigate directly to your chosen pandel.
+            </p>
+
+        </section>
+
+
+        <!-- Search -->
+
+        <div class="search-wrapper">
+
+            <div class="search-box">
+
+                <div class="search-icon" aria-hidden="true">
+                    🔎
+                </div>
+
+                <input type="search" id="searchInput" placeholder="Search pandel or location..." autocomplete="off"
+                    aria-label="Search pandels and locations" />
+
+            </div>
+
+            <p class="result-count" id="resultCount"></p>
+
+            <p class="search-hint">
+                Try searching for "Khagra" or a pandel name
+            </p>
+
+        </div>
+
+
+        <!-- =====================================================
+         LOCATIONS
+    ====================================================== -->
+
+        <section class="section" aria-labelledby="locations-title">
+
+            <div class="section-header">
+
+                <div class="section-title">
+
+                    <div class="section-title-icon">
+                        📍
+                    </div>
+
+                    <div>
+                        <h2 id="locations-title">
+                            Pandel List
+                        </h2>
+
+                        <p>
+                            Explore pandels
+                        </p>
+                    </div>
+
+                </div>
+
+                <p>
+                    Navigate your pandel location
+                </p>
+
+            </div>
+
+
+            <!-- <div class="location-list" id="locationList">
+
+                <a href="map.html?location=Berhampore" class="location-item searchable"
+                    data-search="berhampore berhampore baharampur murshidabad west bengal"
+                    aria-label="View Durga Puja pandels in Berhampore, Murshidabad">
+
+                    <div class="location-icon">
+                        🛕
+                    </div>
+
+                    <div class="location-info">
+
+                        <h3>
+                            Babulbona Sarbojonin Durga Utsav
+                        </h3>
+
+                        <span>
+                            Khagra, Sonapatti, Berhampore, West Bengal, 742103
+                        </span>
+
+                    </div>
+
+
+                    <div class="arrow" aria-hidden="true">
+                        →
+                    </div>
+
+                </a>
+
+                <a href="map.html?location=Kandi" class="location-item searchable"
+                    data-search="kandi murshidabad west bengal">
+                    <div class="location-icon">🛕</div>
+
+                    <div class="location-info">
+                        <h3>Swargadham Sevak Sangha</h3>
+                        <span>Gorabazar, Berhampore, West Bengal, 742101</span>
+                    </div>
+                    <div class="arrow">→</div>
+                </a>
+
+            </div> -->
+
+            <div class="location-list" id="locationList"></div>
+
+            <!-- Pagination -->
+            <nav class="pagination" aria-label="Location list pagination">
+                <button type="button" class="page-btn" id="prevBtn">
+                    ← Previous
+                </button>
+
+                <div class="page-numbers" id="pageNumbers"></div>
+
+                <button type="button" class="page-btn" id="nextBtn">
+                    Next →
+                </button>
+            </nav>
+
+        </section>
+
+
+        <!-- =====================================================
+         MAP CTA
+    ====================================================== -->
+
+        <section class="map-banner">
+            <div class="map-banner-content">
+
+                <small>
+                    Kharchalu
+                </small>
+
+                <h2>
+                    Free Personal Finance Tracker for Android
+                </h2>
+
+                <p>
+                    ✓ 100% Free to use<br>
+                    ✓ Easy expense & income tracking<br>
+                    ✓ Personal budget management<br>
+                    ✓ Simple & private
+                </p>
+
+            </div>
+            <a href="/">
+                <button type="button" class="map-button">
+                    Download Now
+                    <span>→</span>
+                </button>
+            </a>
+        </section>
+
+    </main>
+
+
+    <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 <strong>Kharchalu</strong>.
+            Made for discovering Durga Puja pandels.
+        </p>
+
+    </footer>
+
+<script src="./pandels.js"></script>
+<script src="./script.js"></script>
+</body>
+
+</html>
