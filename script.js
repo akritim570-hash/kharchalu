@@ -8,19 +8,32 @@ const pageNumbers = document.getElementById("pageNumbers");
 const itemsPerPage = 6;
 
 let currentPage = 1;
-let filteredData = data;
+
+// Sort pandels by area alphabetically (A–Z)
+const sortedData = [...data].sort((a, b) => {
+    return (a.area || "").localeCompare(
+        b.area || "",
+        undefined,
+        { sensitivity: "base" }
+    );
+});
+
+let filteredData = sortedData;
 
 // Search pandels by name, Bengali name, area, or keywords
 function filterLocations() {
     const query = searchInput.value.trim().toLowerCase();
 
-    filteredData = data.filter(item => {
+    filteredData = sortedData.filter(item => {
         const searchableText = [
             item.name,
             item.bengali_name,
             item.area,
             item.search
-        ].filter(Boolean).join(" ").toLowerCase();
+        ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase();
 
         return searchableText.includes(query);
     });
@@ -39,6 +52,7 @@ function renderLocations() {
     const totalItems = filteredData.length;
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 
+    // Keep current page within valid limits
     if (currentPage > totalPages) {
         currentPage = Math.max(1, totalPages);
     }
@@ -63,6 +77,7 @@ function renderLocations() {
         const icon = document.createElement("span");
         icon.className = "no-results-icon";
         icon.textContent = "🔎";
+        icon.setAttribute("aria-hidden", "true");
 
         const message = document.createElement("p");
         message.textContent =
@@ -72,13 +87,13 @@ function renderLocations() {
         locationList.appendChild(empty);
     }
 
-    // Generate cards
+    // Generate location cards
     currentItems.forEach(item => {
         const card = document.createElement("a");
         card.className = "location-item searchable";
         card.href = item.location || "#";
 
-        // Open the selected location in a new tab
+        // Open selected location in a new tab
         card.target = "_blank";
         card.rel = "noopener noreferrer";
 
@@ -87,29 +102,34 @@ function renderLocations() {
             `View ${item.name} - ${item.area}`
         );
 
+        // Pandel icon
         const icon = document.createElement("div");
         icon.className = "location-icon";
         icon.textContent = "🛕";
         icon.setAttribute("aria-hidden", "true");
 
+        // Location information
         const info = document.createElement("div");
         info.className = "location-info";
 
+        // Pandel name
         const title = document.createElement("h3");
         title.textContent = item.name;
-
         info.appendChild(title);
 
+        // Bengali name (if available)
         if (item.bengali_name) {
             const bengali = document.createElement("span");
             bengali.textContent = item.bengali_name;
             info.appendChild(bengali);
         }
 
+        // Area name
         const area = document.createElement("span");
-        area.textContent = item.area;
+        area.textContent = item.area || "";
         info.appendChild(area);
 
+        // Arrow icon
         const arrow = document.createElement("div");
         arrow.className = "arrow";
         arrow.textContent = "→";
@@ -126,7 +146,7 @@ function renderLocations() {
     nextBtn.disabled =
         totalPages === 0 || currentPage >= totalPages;
 
-    // Numbered pagination
+    // Generate numbered pagination
     for (let page = 1; page <= totalPages; page++) {
         const button = document.createElement("button");
 
