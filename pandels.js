@@ -160,5 +160,67 @@ const data = [
         "area": "Dayanagar (দয়ানগর)",
         "location": "https://maps.app.goo.gl/Ro5M2DQjvZf1yQe66?g_st=aw"
     },
-
+    {
+        "id": 22,
+        "name": "Doyamoyi Kali Bari Mandir Puja Committee",
+        "bengali_name": "দয়াময়ী কালীবাড়ি মন্দির পূজা কমিটি",
+        "area": "Saidabad (সৈদাবাদ)",
+        "location": "https://maps.app.goo.gl/EPbHvQPUqtZQ9fNb9?g_st=aw"
+    },
+    {
+        "id": 23,
+        "name": "Dayanagar Amar Shubhas Sanga Puja Committee",
+        "bengali_name": "দয়ানগর অমর সুভাষ সংঘ পূজা কমিটি",
+        "area": "Dayanagar (দয়ানগর)",
+        "location": "https://maps.app.goo.gl/YAfWQtxRJJbSjZEg9?g_st=aw"
+    },
+    {
+        "id": 24,
+        "name": "Kantanagar (Unknown) Puja Committee",
+        "bengali_name": "কান্তনগর পূজা কমিটি",
+        "area": "Kantanagar (কান্তনগর)",
+        "location": "https://maps.app.goo.gl/Ci8UUkvkEd5HCd87A?g_st=aw"
+    },
+    {
+        "id": 25,
+        "name": "Maa Durga Mandir Shibtala Puja Committee",
+        "bengali_name": "মা দুর্গা মন্দির শিবতলা পূজা কমিটি",
+        "area": "Kantanagar (কান্তনগর)",
+        "location": "https://maps.app.goo.gl/hzxLMCW5v3ut6RT27?g_st=aw"
+    },
+    {
+        "id": 26,
+        "name": "Radharghat Bapuji Club Puja Committee",
+        "bengali_name": "রাধারঘাট বাপুজী ক্লাব পূজা কমিটি",
+        "area": "Radharghat (রাধারঘাট)",
+        "location": "https://maps.app.goo.gl/Aj4Pw1dNWyHo1jJX9?g_st=aw"
+    },
+    {
+        "id": 27,
+        "name": "Choto Rajbari Para Durga Puja Committee",
+        "bengali_name": "ছোট রাজবাড়ী পাড়া দুর্গা পূজা কমিটি",
+        "area": "Cossimbazar (কাশিমবাজার)",
+        "location": "https://maps.app.goo.gl/DswKYgmSjkEwFBFw5?g_st=aw"
+    },
+    {
+        "id": 28,
+        "name": "Ranibagan Durga Mandir Puja Committee",
+        "bengali_name": "রানিবাগান দুর্গামন্দির দুর্গা পূজা কমিটি",
+        "area": "Ranibagan (রানিবাগান)",
+        "location": "https://maps.app.goo.gl/8Tr4FHqrNbsP6pd28?g_st=aw"
+    },
+    {
+        "id": 29,
+        "name": "Lower Kadai Kishore Sangha Puja Committee",
+        "bengali_name": "লোয়ার কাদাই কিশোর সংঘ পূজা কমিটি",
+        "area": "Lower Kadai (লোয়ার কাদাই)",
+        "location": "https://maps.app.goo.gl/gDPQz6XaWghmGEXV7?g_st=aw"
+    },
+    {
+        "id": 30,
+        "name": "Maa Jagadamba Temple Puja Committee",
+        "bengali_name": "মা জগদম্বা মন্দির পূজা কমিটি",
+        "area": "Khagra (খাগড়া)",
+        "location": "https://maps.app.goo.gl/GpFQVxNypNBCzwbF7?g_st=aw"
+    },
 ]
