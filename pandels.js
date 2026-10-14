@@ -176,7 +176,7 @@ const data = [
     },
     {
         "id": 24,
-        "name": "Kantanagar (Unknown) Puja Committee",
+        "name": "Kantanagar Para Puja Committee",
         "bengali_name": "কান্তনগর পূজা কমিটি",
         "area": "Kantanagar (কান্তনগর)",
         "location": "https://maps.app.goo.gl/Ci8UUkvkEd5HCd87A?g_st=aw"
@@ -236,5 +236,75 @@ const data = [
         "bengali_name": "কান্তনগর দুর্গা পূজা কমিটি",
         "area": "Kantanagar (কান্তনগর)",
         "location": "https://maps.app.goo.gl/EPnrCoFyGN2z8VxE8?g_st=aw"
+    },
+    {
+        "id": 33,
+        "name": "Cossimbazar Durga Mandir Puja Committee",
+        "bengali_name": "কাশিমবাজার দুর্গা মন্দির পূজা কমিটি",
+        "area": "Cossimbazar (কাশিমবাজার)",
+        "location": "https://maps.app.goo.gl/MDKNeWZF6ffeCfFDA?g_st=aw"
+    },
+    {
+        "id": 34,
+        "name": "4 No Manindranagar Durga Mandir Puja Committee",
+        "bengali_name": "৪ নং মনীন্দ্রনগর দুর্গা মন্দির পূজা কমিটি",
+        "area": "Cossimbazar (কাশিমবাজার)",
+        "location": "https://maps.app.goo.gl/vVKjMhtr5bhLzN4u8?g_st=aw"
+    },
+    {
+        "id": 35,
+        "name": "Three H Club Durga Puja Committee",
+        "bengali_name": "থ্রিএইচ ক্লাব দুর্গা পূজা কমিটি",
+        "area": "Cossimbazar (কাশিমবাজার)",
+        "location": "https://maps.app.goo.gl/L9JRxvwYoUQTMqreA?g_st=aw"
+    },
+    {
+        "id": 36,
+        "name": "Manindra Nagar Miloni Durga Mandir Puja Committee",
+        "bengali_name": "মনীন্দ্র নগর মিলন দুর্গা মন্দির দুর্গা পূজা কমিটি",
+        "area": "Cossimbazar (কাশিমবাজার)",
+        "location": "https://maps.app.goo.gl/h7qXyE5FoqSn4MaH6?g_st=aw"
+    },
+    {
+        "id": 37,
+        "name": "Poresh Nath Smriti Mandir Club Puja Committee",
+        "bengali_name": "পরেশ নাথ স্মৃতি মন্দির ক্লাব দুর্গা পূজা কমিটি",
+        "area": "Cossimbazar (কাশিমবাজার)",
+        "location": "https://maps.app.goo.gl/Zbz7p7YmGGassH5D8?g_st=aw"
+    },
+    {
+        "id": 38,
+        "name": "Bhatpara Purbanchal Durga Mandir Puja Committee",
+        "bengali_name": "ভাটপাড়া পূর্বাঞ্চল দুর্গা মন্দির দুর্গা পূজা কমিটি",
+        "area": "Cossimbazar (কাশিমবাজার)",
+        "location": "https://maps.app.goo.gl/i8VfqLmFS2pcHm319?g_st=aw"
+    },
+    {
+        "id": 39,
+        "name": "Chunakhali Sarbajanin Durgautsab Puja Committee",
+        "bengali_name": "চুনাখালী সার্বজনীন দুর্গোৎসব পূজা কমিটি",
+        "area": "Chunakhali (চুনাখালী)",
+        "location": "https://maps.app.goo.gl/kAgrXRkiERxVZoiC9?g_st=aw"
+    },
+    {
+        "id": 40,
+        "name": "Lalsarak Durga Puja Committee",
+        "bengali_name": "লালসড়ক দুর্গা পূজা কমিটি",
+        "area": "Cossimbazar (কাশিমবাজার)",
+        "location": "https://maps.app.goo.gl/GctEZvLn94gkKak37?g_st=aw"
+    },
+    {
+        "id": 41,
+        "name": "Girja Para Puja Committee",
+        "bengali_name": "গির্জা পাড়া দুর্গা পূজা কমিটি",
+        "area": "Saidabad (সৈদাবাদ)",
+        "location": "https://maps.app.goo.gl/XtoYVhfHPs2FZ1UV9?g_st=aw"
+    },
+    {
+        "id": 42,
+        "name": "8 No Manindranagar Durga Puja Committee",
+        "bengali_name": "৮ নং মনীন্দ্রনগর দুর্গা পূজা কমিটি",
+        "area": "Cossimbazar (কাশিমবাজার)",
+        "location": "https://maps.app.goo.gl/7hSDvxeghvgLMBN68?g_st=aw"
     },
 ]
