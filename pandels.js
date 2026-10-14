@@ -223,4 +223,18 @@ const data = [
         "area": "Khagra (খাগড়া)",
         "location": "https://maps.app.goo.gl/GpFQVxNypNBCzwbF7?g_st=aw"
     },
+    {
+        "id": 31,
+        "name": "The New Amader Dol Durga Puja Committee",
+        "bengali_name": "দি নিউ আমাদের দল দুর্গা পূজা কমিটি",
+        "area": "Khagra (খাগড়া)",
+        "location": "https://maps.app.goo.gl/wwKxFenDSeXEqu66A?g_st=aw"
+    },
+    {
+        "id": 32,
+        "name": "Kantanagar Durga Puja Committee",
+        "bengali_name": "কান্তনগর দুর্গা পূজা কমিটি",
+        "area": "Kantanagar (কান্তনগর)",
+        "location": "https://maps.app.goo.gl/EPnrCoFyGN2z8VxE8?g_st=aw"
+    },
 ]
