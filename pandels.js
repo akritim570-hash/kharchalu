@@ -307,4 +307,81 @@ const data = [
         "area": "Cossimbazar (কাশিমবাজার)",
         "location": "https://maps.app.goo.gl/7hSDvxeghvgLMBN68?g_st=aw"
     },
+    {
+        "id": 43,
+        "name": "8 No Manindranagar Durga Puja Committee",
+        "bengali_name": "৮ নং মনীন্দ্রনগর দুর্গা পূজা কমিটি",
+        "area": "Cossimbazar (কাশিমবাজার)",
+        "location": "https://maps.app.goo.gl/7hSDvxeghvgLMBN68?g_st=aw"
+    },
+    {
+        "id": 44,
+        "name": "8 No Manindranagar Durga Puja Committee",
+        "bengali_name": "৮ নং মনীন্দ্রনগর দুর্গা পূজা কমিটি",
+        "area": "Cossimbazar (কাশিমবাজার)",
+        "location": "https://maps.app.goo.gl/7hSDvxeghvgLMBN68?g_st=aw"
+    },
+    {
+        "id": 45,
+        "name": "Chuanpur Sarbajanin Durga Puja Committee",
+        "bengali_name": "চুঁয়াপুর সার্বজনীন দুর্গা পূজা কমিটি",
+        "area": "Chuanpur (চুঁয়াপুর)",
+        "location": "https://maps.app.goo.gl/cd7YEEsuJK2FHmEj8?g_st=aw"
+    },
+    {
+        "id": 46,
+        "name": "Bidhannagar Puja Committee",
+        "bengali_name": "বিধাননগর পূজা কমিটি",
+        "area": "Chuanpur (চুঁয়াপুর)",
+        "location": "https://maps.app.goo.gl/A628EajreyqakWAEA?g_st=aw"
+    },
+    {
+        "id": 47,
+        "name": "Panchanantala Kali Mandir Puja Committee",
+        "bengali_name": "পঞ্চানন্তলা কালী মন্দির পূজা কমিটি",
+        "area": "Panchanantala (পঞ্চানন্তলা)",
+        "location": "https://maps.app.goo.gl/dQWzb2fozLGQL1ce7?g_st=aw"
+    },
+    {
+        "id": 48,
+        "name": "Chuanpur Kadamtala Talabagan Road Durga Puja Committee",
+        "bengali_name": "চুঁয়াপুর কদমতলা তালাবাগান রোড দুর্গা পূজা কমিটি",
+        "area": "Chuanpur (চুঁয়াপুর)",
+        "location": "https://maps.app.goo.gl/5Jj1x8UGU5632fXp9?g_st=aw"
+    },
+    {
+        "id": 49,
+        "name": "Radhika Nagar Durga Puja Committee",
+        "bengali_name": "রাধিকানগর দুর্গা পূজা কমিটি",
+        "area": "Panchanantala (পঞ্চানন্তলা)",
+        "location": "https://maps.app.goo.gl/LD2kFUA3vPW1BKyCA?g_st=aw"
+    },
+    {
+        "id": 50,
+        "name": "Purbasha Durga Puja Committee",
+        "bengali_name": "পূর্বাশা দুর্গা পূজা কমিটি",
+        "area": "Panchanantala (পঞ্চানন্তলা)",
+        "location": "https://maps.app.goo.gl/gCmJX36qYmtebeddA?g_st=aw"
+    },
+    {
+        "id": 50,
+        "name": "Purbasha Durga Puja Committee",
+        "bengali_name": "পূর্বাশা দুর্গা পূজা কমিটি",
+        "area": "Banjetia (বাঞ্জেটিয়া)",
+        "location": "https://maps.app.goo.gl/gCmJX36qYmtebeddA?g_st=aw"
+    },
+    {
+        "id": 50,
+        "name": "Banjetia Club Durga Puja Committee",
+        "bengali_name": "বাঞ্জেটিয়া ক্লাব দূর্গা পূজা কমিটি",
+        "area": "Banjetia (বাঞ্জেটিয়া)",
+        "location": "https://maps.app.goo.gl/p8UiGHCRzzS5NRs96?g_st=aw"
+    },
+    {
+        "id": 51,
+        "name": "Akshay Samity Durga Puja Committee",
+        "bengali_name": "অক্ষয় সমিতি দূর্গা পূজা কমিটি",
+        "area": "Banjetia (বাঞ্জেটিয়া)",
+        "location": "https://maps.app.goo.gl/HFA34CCxosuUnMCS9?g_st=aw"
+    },
 ]
