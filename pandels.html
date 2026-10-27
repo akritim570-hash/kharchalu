@@ -1,1249 +1,458 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <meta name="description"
-        content="Find Durga Puja pandals in Berhampore, Murshidabad. Explore pandal locations, search for your favourite pandals and plan your route with Kharchalu Pandel Finder." />
-
-    <meta name="title" content="berhampore puja pandels">
-    <meta name="keywords"
-        content="berhampore puja pandels, berhampore puja pandals, berhampore puja pandals 2026, berhampore puja pandels 2026, top 10 berhampore puja pandels, top 10 murshidabad puja pandels, berhampore, berhampore durga puja pandels, durga puja pandels 2026, durga puja pandals 2026, durga puja 2026 date, best durga puja near me, best durga puja pandal near me, best durga puja pandal in kolkata 2026, best durga puja in west bengal, top 10 durga puja pandal in kolkata 2026, berhampore durga puja 2026, berhampore durga puja, durga puja 2026, Durga Puja pandal locations in Berhampore, Durga Puja pandal list Berhampore, Berhampore Durga Puja pandal 2026, Durga Puja pandals in Berhampore, Berhampore puja pandal location, Best Durga Puja pandals in Berhampore">
-    <meta name="author" content="Kharchalu">
-    <meta name="robots" content="index, follow">
-
-    <title>Berhampore Durga Puja Pandals 2026 | Pandel Finder</title>
-
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="canonical"
-      href="https://www.kharchalu.com/pandels">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
-        rel="stylesheet" />
-
-    <style>
-        /* =========================================================
-       ROOT
-    ========================================================= */
-
-        :root {
-            --primary: #b42318;
-            --primary-dark: #8f1d14;
-            --primary-light: #fff1ef;
-
-            --gold: #d99a18;
-            --gold-light: #fff8e5;
-
-            --text: #1f2937;
-            --heading: #171717;
-            --muted: #6b7280;
-
-            --border: #eadfd9;
-            --background: #fffaf7;
-            --surface: #ffffff;
-
-            --shadow-sm: 0 4px 15px rgba(60, 25, 15, 0.06);
-            --shadow-md: 0 12px 35px rgba(60, 25, 15, 0.09);
-            --shadow-lg: 0 20px 55px rgba(60, 25, 15, 0.14);
-
-            --radius-sm: 10px;
-            --radius-md: 16px;
-            --radius-lg: 22px;
-
-            --container: 1180px;
-        }
-
-        .location-info span {
-            display: block;
-            font-weight: bolder;
-            color: black;
-        }
-
-        /* =========================================================
-       RESET
-    ========================================================= */
-
-        *,
-        *::before,
-        *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: "Inter", sans-serif;
-            background:
-                radial-gradient(circle at 10% 10%,
-                    rgba(217, 154, 24, 0.07),
-                    transparent 25%),
-                var(--background);
-            color: var(--text);
-            line-height: 1.5;
-            min-height: 100vh;
-        }
-
-        button,
-        input {
-            font: inherit;
-        }
-
-        a {
-            color: inherit;
-        }
-
-        /* =========================================================
-       HEADER
-    ========================================================= */
-
-        .header {
-            height: 72px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            padding: 0 5%;
-
-            background: rgba(255, 255, 255, 0.94);
-            backdrop-filter: blur(14px);
-
-            border-bottom: 1px solid rgba(234, 223, 217, 0.9);
-        }
-
-        .logo {
-            display: inline-flex;
-            align-items: center;
-            gap: 3px;
-
-            text-decoration: none;
-            color: var(--heading);
-
-            font-size: 21px;
-            font-weight: 800;
-            letter-spacing: -0.7px;
-        }
-
-        .logo-icon {
-            width: 38px;
-            height: 38px;
-
-            display: grid;
-            place-items: center;
-
-            border-radius: 11px;
-
-            background:
-                linear-gradient(135deg,
-                    var(--primary),
-                    #d9432f);
-
-            color: white;
-            font-size: 19px;
-
-            box-shadow:
-                0 7px 18px rgba(180, 35, 24, 0.22);
-        }
-
-        .logo span {
-            color: var(--primary);
-        }
-
-        .header-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-
-            padding: 8px 13px;
-
-            border-radius: 50px;
-
-            background: var(--gold-light);
-            border: 1px solid #f2dfaa;
-
-            color: #956b0d;
-
-            font-size: 12px;
-            font-weight: 700;
-        }
-
-        .live-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: #16a34a;
-
-            box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.1);
-        }
-
-        /* =========================================================
-       MAIN CONTAINER
-    ========================================================= */
-
-        .container {
-            width: min(var(--container), 92%);
-            margin: 0 auto;
-            padding: 65px 0 80px;
-        }
-
-        /* =========================================================
-       HERO
-    ========================================================= */
-
-        .hero {
-            max-width: 780px;
-            margin: 0 auto 40px;
-            text-align: center;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-
-            padding: 8px 14px;
-            margin-bottom: 19px;
-
-            border: 1px solid #f1d5cd;
-            border-radius: 50px;
-
-            background: var(--primary-light);
-            color: var(--primary);
-
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 0.2px;
-        }
-
-        .hero-badge-icon {
-            color: var(--gold);
-            font-size: 14px;
-        }
-
-        .hero h1 {
-            font-family: "Playfair Display", serif;
-
-            color: var(--heading);
-
-            font-size: clamp(38px, 6vw, 62px);
-            line-height: 1.05;
-
-            letter-spacing: -1.8px;
-
-            margin-bottom: 18px;
-        }
-
-        .hero h1 span {
-            color: var(--primary);
-        }
-
-        .hero p {
-            max-width: 650px;
-            margin: 0 auto;
-
-            color: var(--muted);
-
-            font-size: 16px;
-            line-height: 1.8;
-        }
-
-        /* =========================================================
-       SEARCH
-    ========================================================= */
-
-        .search-wrapper {
-            max-width: 720px;
-            margin: 0 auto 60px;
-        }
-
-        .search-box {
-            display: flex;
-            align-items: center;
-
-            padding: 7px;
-
-            background: var(--surface);
-
-            border: 1px solid var(--border);
-            border-radius: 15px;
-
-            box-shadow: var(--shadow-md);
-
-            transition:
-                border-color 0.2s ease,
-                box-shadow 0.2s ease;
-        }
-
-        .search-box:focus-within {
-            border-color: rgba(180, 35, 24, 0.4);
-
-            box-shadow:
-                0 0 0 4px rgba(180, 35, 24, 0.07),
-                var(--shadow-md);
-        }
-
-        .search-icon {
-            width: 48px;
-            height: 48px;
-
-            display: grid;
-            place-items: center;
-
-            color: var(--primary);
-
-            font-size: 22px;
-        }
-
-        .search-box input {
-            flex: 1;
-
-            width: 100%;
-
-            border: 0;
-            outline: 0;
-
-            background: transparent;
-
-            color: var(--text);
-
-            font-size: 14px;
-        }
-
-        .search-box input::placeholder {
-            color: #9ca3af;
-        }
-
-        .search-hint {
-            margin-top: 10px;
-
-            text-align: center;
-
-            color: #9ca3af;
-
-            font-size: 11px;
-        }
-
-        /* =========================================================
-       SECTION
-    ========================================================= */
-
-        .section {
-            margin-bottom: 48px;
-        }
-
-        .section-header {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-
-            gap: 20px;
-
-            margin-bottom: 18px;
-        }
-
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .section-title-icon {
-            width: 42px;
-            height: 42px;
-
-            display: grid;
-            place-items: center;
-
-            border-radius: 12px;
-
-            background: var(--primary-light);
-
-            color: var(--primary);
-
-            font-size: 19px;
-        }
-
-        .section-title h2 {
-            color: var(--heading);
-
-            font-size: 20px;
-            font-weight: 800;
-
-            letter-spacing: -0.5px;
-        }
-
-        .section-title p {
-            margin-top: 2px;
-
-            color: var(--muted);
-
-            font-size: 12px;
-        }
-
-        .section-header>p {
-            color: var(--muted);
-            font-size: 12px;
-        }
-
-        /* =========================================================
-       LOCATION CARD
-    ========================================================= */
-
-        .location-list {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-        }
-
-        .location-item {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-
-            min-height: 90px;
-
-            padding: 17px;
-
-            background: var(--surface);
-
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-
-            text-decoration: none;
-
-            transition:
-                transform 0.2s ease,
-                border-color 0.2s ease,
-                box-shadow 0.2s ease;
-        }
-
-        .location-item:hover {
-            transform: translateY(-4px);
-
-            border-color: #e4b9ae;
-
-            box-shadow: var(--shadow-md);
-        }
-
-        .location-icon {
-            width: 47px;
-            height: 47px;
-
-            flex: 0 0 47px;
-
-            display: grid;
-            place-items: center;
-
-            border-radius: 13px;
-
-            background: var(--primary-light);
-
-            color: var(--primary);
-
-            font-size: 20px;
-        }
-
-        .location-info {
-            min-width: 0;
-            flex: 1;
-        }
-
-        .location-info h3 {
-            margin-bottom: 3px;
-
-            color: var(--heading);
-
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-        .location-info span {
-            color: var(--muted);
-            font-size: 12px;
-        }
-
-        .arrow {
-            color: #aaa;
-
-            font-size: 21px;
-
-            transition:
-                transform 0.2s ease,
-                color 0.2s ease;
-        }
-
-        .location-item:hover .arrow {
-            color: var(--primary);
-            transform: translateX(4px);
-        }
-
-        /* =========================================================
-       MAP CTA
-    ========================================================= */
-
-        .map-banner {
-            position: relative;
-            overflow: hidden;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 30px;
-
-            margin-top: 55px;
-            padding: 32px;
-
-            border-radius: var(--radius-lg);
-
-            color: white;
-
-            background:
-                radial-gradient(circle at 90% 10%,
-                    rgba(255, 220, 120, 0.3),
-                    transparent 25%),
-                linear-gradient(135deg,
-                    #941d15 0%,
-                    #bd2e21 55%,
-                    #d64b34 100%);
-
-            box-shadow: var(--shadow-lg);
-        }
-
-        .map-banner::before {
-            content: "";
-
-            position: absolute;
-
-            width: 280px;
-            height: 280px;
-
-            right: -100px;
-            top: -150px;
-
-            border: 35px solid rgba(255, 255, 255, 0.08);
-
-            border-radius: 50%;
-        }
-
-        .map-banner::after {
-            content: "✦";
-
-            position: absolute;
-
-            right: 230px;
-            bottom: -28px;
-
-            color: rgba(255, 255, 255, 0.1);
-
-            font-size: 100px;
-        }
-
-        .map-banner-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .map-banner-content small {
-            display: block;
-
-            margin-bottom: 7px;
-
-            color: #ffd98c;
-
-            font-size: 11px;
-            font-weight: 800;
-
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .map-banner h2 {
-            margin-bottom: 7px;
-
-            font-size: 24px;
-            font-weight: 800;
-
-            letter-spacing: -0.6px;
-        }
-
-        .map-banner p {
-            max-width: 570px;
-
-            color: rgba(255, 255, 255, 0.78);
-
-            font-size: 13px;
-            line-height: 1.7;
-        }
-
-        .map-button {
-            position: relative;
-            z-index: 2;
-
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 9px;
-
-            min-width: 145px;
-
-            border: 0;
-            border-radius: 11px;
-
-            padding: 13px 19px;
-
-            background: white;
-            color: var(--primary);
-
-            font-size: 13px;
-            font-weight: 800;
-
-            cursor: pointer;
-
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
-        }
-
-        .map-button:hover {
-            transform: translateY(-3px);
-
-            box-shadow:
-                0 12px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        /* =========================================================
-       EMPTY SEARCH STATE
-    ========================================================= */
-
-        .no-results {
-            grid-column: 1 / -1;
-
-            padding: 35px 20px;
-
-            text-align: center;
-
-            background: white;
-
-            border: 1px dashed var(--border);
-            border-radius: var(--radius-md);
-
-            color: var(--muted);
-
-            font-size: 13px;
-        }
-
-        .no-results-icon {
-            display: block;
-
-            margin-bottom: 8px;
-
-            font-size: 28px;
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
-        /* =========================================================
-       FOOTER
-    ========================================================= */
-
-        .footer {
-            padding: 25px 5%;
-
-            border-top: 1px solid var(--border);
-
-            background: white;
-
-            text-align: center;
-
-            color: var(--muted);
-
-            font-size: 12px;
-        }
-
-        .footer strong {
-            color: var(--primary);
-        }
-
-        /* =========================================================
-       RESPONSIVE
-    ========================================================= */
-
-        @media (max-width: 900px) {
-            .location-list {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .container {
-                padding-top: 50px;
-            }
-        }
-
-        @media (max-width: 650px) {
-            .header {
-                height: 66px;
-                padding: 0 4%;
-            }
-
-            .logo {
-                font-size: 18px;
-            }
-
-            .logo-icon {
-                width: 34px;
-                height: 34px;
-                font-size: 16px;
-            }
-
-            .header-badge {
-                padding: 7px 10px;
-                font-size: 10px;
-            }
-
-            .container {
-                width: 92%;
-                padding: 42px 0 55px;
-            }
-
-            .hero {
-                margin-bottom: 30px;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-                letter-spacing: -1px;
-            }
-
-            .hero p {
-                font-size: 14px;
-            }
-
-            .search-wrapper {
-                margin-bottom: 45px;
-            }
-
-            .search-box {
-                border-radius: 13px;
-            }
-
-            .search-hint {
-                display: none;
-            }
-
-            .section {
-                margin-bottom: 38px;
-            }
-
-            .section-header {
-                display: block;
-                margin-bottom: 14px;
-            }
-
-            .section-header>p {
-                margin-top: 7px;
-                margin-left: 54px;
-            }
-
-            .location-list {
-                grid-template-columns: 1fr;
-            }
-
-            .map-banner {
-                display: block;
-                padding: 25px;
-                margin-top: 35px;
-            }
-
-            .map-banner h2 {
-                font-size: 21px;
-            }
-
-            .map-button {
-                width: 100%;
-                margin-top: 20px;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .header-badge {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 34px;
-            }
-
-            .section-title h2 {
-                font-size: 18px;
-            }
-        }
-
-        /* =========================================================
-       REDUCED MOTION
-    ========================================================= */
-
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-
-            *,
-            *::before,
-            *::after {
-                transition: none !important;
-            }
-        }
-
-        /* =========================================================
-   VISITED BUTTON
-========================================================= */
-
-        .visited-btn {
-            flex-shrink: 0;
-
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-
-            border: 1px solid #e5e7eb;
-            border-radius: 50px;
-
-            padding: 7px 10px;
-
-            background: #fff;
-            color: #9ca3af;
-
-            font-size: 11px;
-            font-weight: 700;
-
-            cursor: pointer;
-
-            transition:
-                background 0.2s ease,
-                border-color 0.2s ease,
-                color 0.2s ease,
-                transform 0.2s ease;
-        }
-
-        .visited-btn .tick {
-            width: 18px;
-            height: 18px;
-
-            display: grid;
-            place-items: center;
-
-            border: 1px solid #d1d5db;
-            border-radius: 50%;
-
-            font-size: 11px;
-
-            transition:
-                background 0.2s ease,
-                border-color 0.2s ease,
-                color 0.2s ease;
-        }
-
-        .visited-btn:hover {
-            border-color: #16a34a;
-            color: #16a34a;
-        }
-
-        /* Visited state */
-
-        .location-item.visited .visited-btn {
-            background: #ecfdf3;
-            border-color: #86efac;
-            color: #15803d;
-        }
-
-        .location-item.visited .visited-btn .tick {
-            background: #16a34a;
-            border-color: #16a34a;
-            color: white;
-        }
-
-        /* Slightly dim visited card */
-
-        .location-item.visited {
-            background: #fcfffd;
-            border-color: #d1fae5;
-        }
-
-        .location-item.visited .location-info h3 {
-            color: #166534;
-        }
-
-        /* Mobile */
-
-        @media (max-width: 650px) {
-            .visited-btn {
-                padding: 6px;
-            }
-
-            .visited-btn .visited-text {
-                display: none;
-            }
-        }
-
-        /* =========================================================
-   PAGINATION
-========================================================= */
-
-        .pagination {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 8px;
-
-            margin-top: 28px;
-        }
-
-        .page-numbers {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .page-btn,
-        .page-number {
-            min-width: 40px;
-            height: 40px;
-
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-
-            border: 1px solid var(--border);
-            border-radius: 10px;
-
-            background: white;
-            color: var(--text);
-
-            font-size: 12px;
-            font-weight: 700;
-
-            cursor: pointer;
-
-            transition:
-                background 0.2s ease,
-                border-color 0.2s ease,
-                color 0.2s ease,
-                transform 0.2s ease;
-        }
-
-        .page-btn {
-            padding: 0 14px;
-        }
-
-        .page-btn:hover:not(:disabled),
-        .page-number:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-
-            transform: translateY(-1px);
-        }
-
-        .page-number.active {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: white;
-        }
-
-        .page-btn:disabled {
-            opacity: 0.4;
-            cursor: not-allowed;
-        }
-
-        .page-dots {
-            min-width: 30px;
-
-            display: inline-flex;
-            justify-content: center;
-
-            color: var(--muted);
-            font-size: 13px;
-        }
-
-        /* Mobile */
-
-        @media (max-width: 480px) {
-
-  .pagination {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    gap: 6px;
-  }
-
-  .page-btn {
-    height: 38px;
-    padding: 0 10px;
-
-    font-size: 11px;
-    white-space: nowrap;
-
-    flex-shrink: 0;
-  }
-
-  .page-numbers {
-    display: flex;
-    gap: 3px;
-
-    /* overflow: hidden; */
-    overflow-x: auto;
-  }
-
-  .page-number {
-    min-width: 34px;
-    height: 36px;
-    padding: 0 8px;
-
-    flex-shrink: 0;
-  }
-
-}
-
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#180707">
+
+  <title>Durga Puja 2027 | Coming Soon</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #f6cf7a;
+      --gold-light: #fff0bd;
+      --red: #9e1720;
+      --dark: #180707;
+      --cream: #fff8e9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      color: var(--cream);
+      background: var(--dark);
+      font-family: "Poppins", sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Background */
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100svh;
+      padding: 40px 20px;
+      text-align: center;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 50% 42%,
+          rgba(147, 31, 26, 0.72) 0%,
+          rgba(64, 12, 12, 0.85) 38%,
+          #180707 78%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(246, 207, 122, 0.5);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: min(600px, 90vw);
+      aspect-ratio: 1;
+      border: 1px solid rgba(246, 207, 122, 0.15);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 35px rgba(246, 207, 122, 0.025),
+        0 0 0 75px rgba(246, 207, 122, 0.025),
+        0 0 100px rgba(246, 207, 122, 0.08);
+      z-index: -1;
+      animation: breathe 6s ease-in-out infinite;
+    }
+
+    .glow {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(255, 179, 64, 0.12);
+      filter: blur(65px);
+      pointer-events: none;
+    }
+
+    .glow-left {
+      top: 15%;
+      left: -60px;
+    }
+
+    .glow-right {
+      right: -60px;
+      bottom: 12%;
+    }
+
+    /* Decorative stars */
+
+    .stars {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .star {
+      position: absolute;
+      color: var(--gold-light);
+      opacity: 0.6;
+      animation: twinkle 3s ease-in-out infinite alternate;
+    }
+
+    .star:nth-child(1) { top: 15%; left: 15%; font-size: 18px; }
+    .star:nth-child(2) { top: 26%; right: 17%; font-size: 12px; animation-delay: 1s; }
+    .star:nth-child(3) { top: 68%; left: 12%; font-size: 13px; animation-delay: 1.5s; }
+    .star:nth-child(4) { bottom: 18%; right: 13%; font-size: 20px; animation-delay: .5s; }
+    .star:nth-child(5) { top: 45%; left: 7%; font-size: 10px; animation-delay: 2s; }
+    .star:nth-child(6) { top: 48%; right: 8%; font-size: 11px; animation-delay: .8s; }
+
+    /* Content */
+
+    .content {
+      width: 100%;
+      max-width: 850px;
+      animation: rise 1.1s ease both;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 27px;
+    }
+
+    .eyebrow::before,
+    .eyebrow::after {
+      content: "";
+      width: 35px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .symbol {
+      font-size: clamp(52px, 9vw, 78px);
+      line-height: 1.25;
+      margin-bottom: 10px;
+      color: var(--gold-light);
+      text-shadow: 0 0 30px rgba(255, 192, 80, 0.45);
+    }
+
+    h1 {
+      font-family: "Cinzel", serif;
+      font-weight: 600;
+      font-size: clamp(43px, 9vw, 88px);
+      line-height: 1.12;
+      letter-spacing: 3px;
+      color: var(--gold-light);
+      text-shadow: 0 5px 35px rgba(255, 184, 62, 0.15);
+    }
+
+    h1 span {
+      display: block;
+      color: var(--gold);
+      font-size: 0.48em;
+      letter-spacing: 10px;
+      margin-top: 14px;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 30px auto 24px;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      width: 65px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    .divider::after {
+      transform: rotate(180deg);
+    }
+
+    .divider span {
+      color: var(--gold);
+      font-size: 16px;
+    }
+
+    .subtitle {
+      font-size: clamp(13px, 2.4vw, 16px);
+      line-height: 1.9;
+      font-weight: 300;
+      color: rgba(255, 248, 233, 0.82);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .coming {
+      margin-top: 30px;
+      font-size: 11px;
+      letter-spacing: 6px;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .year {
+      font-family: "Cinzel", serif;
+      font-size: clamp(42px, 8vw, 66px);
+      letter-spacing: 9px;
+      font-weight: 500;
+      margin-top: 8px;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--gold);
+    }
+
+    /* Countdown */
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: clamp(12px, 4vw, 35px);
+      margin: 30px auto 0;
+    }
+
+    .time-box {
+      min-width: 62px;
+    }
+
+    .time-box strong {
+      display: block;
+      color: var(--gold-light);
+      font-family: "Cinzel", serif;
+      font-size: clamp(25px, 5vw, 37px);
+      font-weight: 500;
+    }
+
+    .time-box span {
+      display: block;
+      color: rgba(255, 248, 233, 0.6);
+      font-size: 9px;
+      letter-spacing: 2px;
+      margin-top: 5px;
+    }
+
+    .footer {
+      margin-top: 44px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      line-height: 2;
+      color: rgba(255, 248, 233, 0.48);
+    }
+
+    .footer b {
+      color: var(--gold);
+      font-weight: 400;
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.25; transform: scale(0.8); }
+      to { opacity: 0.9; transform: scale(1.2); }
+    }
+
+    @keyframes breathe {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.04); opacity: 1; }
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 35px 22px;
+      }
+
+      .hero::before {
+        inset: 9px;
+      }
+
+      .eyebrow {
+        font-size: 9px;
+        letter-spacing: 3px;
+        gap: 8px;
+      }
+
+      .eyebrow::before,
+      .eyebrow::after {
+        width: 20px;
+      }
+
+      h1 {
+        letter-spacing: 1px;
+      }
+
+      h1 span {
+        letter-spacing: 6px;
+      }
+
+      .coming {
+        letter-spacing: 4px;
+      }
+
+      .year {
+        letter-spacing: 6px;
+      }
+
+      .countdown {
+        gap: 10px;
+      }
+
+      .time-box {
+        min-width: 54px;
+      }
+
+      .time-box span {
+        font-size: 8px;
+        letter-spacing: 1px;
+      }
+
+      .footer {
+        margin-top: 35px;
+        font-size: 9px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <main class="hero">
+    <div class="glow glow-left"></div>
+    <div class="glow glow-right"></div>
 
-    <!-- =======================================================
-       HEADER
-  ======================================================== -->
+    <div class="stars" aria-hidden="true">
+      <span class="star">✦</span>
+      <span class="star">✧</span>
+      <span class="star">✦</span>
+      <span class="star">✧</span>
+      <span class="star">✦</span>
+      <span class="star">✧</span>
+    </div>
 
-    <header class="header">
+    <section class="content">
+      <div class="eyebrow">A Celebration of Faith &amp; Culture</div>
 
-        <a href="index.html" class="logo" aria-label="Pandel Finder Home">
-            <span class="logo-icon">🪔</span>
-            Pandel<span>Finder</span>
-        </a>
+      <div class="symbol" aria-hidden="true">ॐ</div>
 
-        <div class="header-badge">
-            <span class="live-dot"></span>
-            Durga Puja 2026 (Berhampore)
+      <h1>
+        DURGA PUJA
+        <span>SHARODIYA UTSAV</span>
+      </h1>
+
+      <div class="divider"><span>✦</span></div>
+
+      <p class="subtitle">
+        The drums will echo, the lights will shine, and Maa Durga
+        will return to fill our hearts with joy, hope, and blessings.
+        <br>
+        <em>A divine celebration is on its way.</em>
+      </p>
+
+      <p class="coming">Something Beautiful Is Coming</p>
+      <div class="year">2027</div>
+
+      <div class="countdown" aria-label="Countdown to Durga Puja">
+        <div class="time-box">
+          <strong id="days">000</strong>
+          <span>DAYS</span>
         </div>
-
-    </header>
-
-
-    <!-- =======================================================
-       MAIN
-  ======================================================== -->
-
-    <main class="container">
-
-        <!-- Hero -->
-
-        <section class="hero">
-
-            <div class="hero-badge">
-                <span class="hero-badge-icon">✦</span>
-                Discover Durga Puja 2026
-            </div>
-
-            <h1>
-                Berhampore Durga Puja 
-                <span>Pandals 2026</span>
-            </h1>
-
-            <p>
-                Find Durga Puja pandels around Berhampore.
-                Discover locations and navigate directly to your chosen pandel.
-            </p>
-
-        </section>
-
-
-        <!-- Search -->
-
-        <div class="search-wrapper">
-
-            <div class="search-box">
-
-                <div class="search-icon" aria-hidden="true">
-                    🔎
-                </div>
-
-                <input type="search" id="searchInput" placeholder="Search pandel or location..." autocomplete="off"
-                    aria-label="Search pandels and locations" />
-
-            </div>
-
-            <p class="result-count" id="resultCount"></p>
-
-            <p class="search-hint">
-                Try searching for "Khagra" or a pandel name
-            </p>
-
+        <div class="time-box">
+          <strong id="hours">00</strong>
+          <span>HOURS</span>
         </div>
+        <div class="time-box">
+          <strong id="minutes">00</strong>
+          <span>MINUTES</span>
+        </div>
+        <div class="time-box">
+          <strong id="seconds">00</strong>
+          <span>SECONDS</span>
+        </div>
+      </div>
 
+      <footer class="footer">
+        <b>ASHECHHE MAA</b> &nbsp;·&nbsp; THE COUNTDOWN BEGINS
+        <br>
+        WITH LOVE, DEVOTION &amp; THE SPIRIT OF BENGAL
+      </footer>
+    </section>
+  </main>
 
-        <!-- =====================================================
-         LOCATIONS
-    ====================================================== -->
+  <script>
+    // Update this date to the main puja opening date in your location.
+    // Format: YYYY-MM-DDTHH:MM:SS+05:30
+    const pujaDate = new Date("2027-10-08T00:00:00+05:30").getTime();
 
-        <section class="section" aria-labelledby="locations-title">
+    const elements = {
+      days: document.getElementById("days"),
+      hours: document.getElementById("hours"),
+      minutes: document.getElementById("minutes"),
+      seconds: document.getElementById("seconds")
+    };
 
-            <div class="section-header">
+    function updateCountdown() {
+      const remaining = pujaDate - Date.now();
 
-                <div class="section-title">
+      if (remaining <= 0) {
+        Object.values(elements).forEach(el => el.textContent = "00");
+        document.querySelector(".coming").textContent =
+          "The Celebration Has Begun";
+        return;
+      }
 
-                    <div class="section-title-icon">
-                        📍
-                    </div>
+      elements.days.textContent =
+        String(Math.floor(remaining / 86400000)).padStart(3, "0");
 
-                    <div>
-                        <h2 id="locations-title">
-                            Pandel List
-                        </h2>
+      elements.hours.textContent =
+        String(Math.floor((remaining % 86400000) / 3600000)).padStart(2, "0");
 
-                        <p>
-                            Explore pandels
-                        </p>
-                    </div>
+      elements.minutes.textContent =
+        String(Math.floor((remaining % 3600000) / 60000)).padStart(2, "0");
 
-                </div>
+      elements.seconds.textContent =
+        String(Math.floor((remaining % 60000) / 1000)).padStart(2, "0");
+    }
 
-                <p>
-                    Navigate your pandel location
-                </p>
-
-            </div>
-
-
-            <!-- <div class="location-list" id="locationList">
-
-                <a href="map.html?location=Berhampore" class="location-item searchable"
-                    data-search="berhampore berhampore baharampur murshidabad west bengal"
-                    aria-label="View Durga Puja pandels in Berhampore, Murshidabad">
-
-                    <div class="location-icon">
-                        🛕
-                    </div>
-
-                    <div class="location-info">
-
-                        <h3>
-                            Babulbona Sarbojonin Durga Utsav
-                        </h3>
-
-                        <span>
-                            Khagra, Sonapatti, Berhampore, West Bengal, 742103
-                        </span>
-
-                    </div>
-
-
-                    <div class="arrow" aria-hidden="true">
-                        →
-                    </div>
-
-                </a>
-
-                <a href="map.html?location=Kandi" class="location-item searchable"
-                    data-search="kandi murshidabad west bengal">
-                    <div class="location-icon">🛕</div>
-
-                    <div class="location-info">
-                        <h3>Swargadham Sevak Sangha</h3>
-                        <span>Gorabazar, Berhampore, West Bengal, 742101</span>
-                    </div>
-                    <div class="arrow">→</div>
-                </a>
-
-            </div> -->
-
-            <div class="location-list" id="locationList"></div>
-
-            <!-- Pagination -->
-            <nav class="pagination" aria-label="Location list pagination">
-                <button type="button" class="page-btn" id="prevBtn">
-                    ← Previous
-                </button>
-
-                <div class="page-numbers" id="pageNumbers"></div>
-
-                <button type="button" class="page-btn" id="nextBtn">
-                    Next →
-                </button>
-            </nav>
-
-        </section>
-
-
-        <!-- =====================================================
-         MAP CTA
-    ====================================================== -->
-
-        <section class="map-banner">
-            <div class="map-banner-content">
-
-                <small>
-                    Kharchalu
-                </small>
-
-                <h2>
-                    Free Personal Finance Tracker for Android
-                </h2>
-
-                <p>
-                    ✓ 100% Free to use<br>
-                    ✓ Easy expense & income tracking<br>
-                    ✓ Personal budget management<br>
-                    ✓ Simple & private
-                </p>
-
-            </div>
-            <a href="https://play.google.com/store/apps/details?id=io.com.kharchalu" target="_blank">
-                <button type="button" class="map-button">
-                    Download Now
-                    <span>→</span>
-                </button>
-            </a>
-        </section>
-
-    </main>
-
-
-    <!-- =======================================================
-       FOOTER
-  ======================================================== -->
-
-    <footer class="footer">
-
-        <p>
-            © 2026 <strong>Kharchalu</strong>.
-            Made for discovering Durga Puja pandels.
-        </p>
-
-    </footer>
-
-<script src="./pandels.js"></script>
-<script src="./script.js"></script>
-<script>
-    navigator.geolocation.getCurrentPosition(
-        () => {},
-        () => {}
-    );
-</script>
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
 </body>
-
 </html>
